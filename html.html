@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Basics - StackForge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <img src="assets/Logo.img.png" alt="StackForge Logo">
+    <h1>HTML Basics - Learn HTML from Beginner to Advanced</h1>
+    <p>Explore and learn the fundamental building blocks of web development.</p>
+</header>
+
+<main>
+    <section id="intro">
+        <h2>Introduction to HTML</h2>
+        <p>HTML (Hypertext Markup Language) is the standard language for creating web pages. It is used to structure content on the web, such as text, images, links, and multimedia.</p>
+    </section>
+
+    <section id="basic-tags">
+        <h2>Basic HTML Tags</h2>
+        <p>HTML uses tags to create elements on the page. Here are the most commonly used basic tags:</p>
+        <ul>
+            <li><strong>&lt;!DOCTYPE html&gt;</strong> - Defines the document type and version of HTML.</li>
+            <li><strong>&lt;html&gt;</strong> - The root element that contains the entire HTML document.</li>
+            <li><strong>&lt;head&gt;</strong> - Contains metadata such as the document title, character set, and linked stylesheets.</li>
+            <li><strong>&lt;body&gt;</strong> - Contains the main content of the web page.</li>
+            <li><strong>&lt;title&gt;</strong> - Specifies the title of the webpage, shown in the browser tab.</li>
+            <li><strong>&lt;h1&gt; to &lt;h6&gt;</strong> - Heading tags used for defining different levels of headings.</li>
+            <li><strong>&lt;p&gt;</strong> - Paragraph tag, used to group text into separate blocks.</li>
+            <li><strong>&lt;a&gt;</strong> - Anchor tag, used to create hyperlinks.</li>
+            <li><strong>&lt;img&gt;</strong> - Used to display images on the webpage.</li>
+            <li><strong>&lt;ul&gt;, &lt;ol&gt;</strong> - Lists: unordered (bullets) and ordered (numbered).</li>
+            <li><strong>&lt;li&gt;</strong> - List items inside an unordered or ordered list.</li>
+        </ul>
+
+        <h3>Example:</h3>
+        <pre>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My First Webpage&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Welcome to My Webpage&lt;/h1&gt;
+        &lt;p&gt;This is a simple paragraph of text&lt;/p&gt;
+        &lt;a href="https://example.com"&gt;Click here to visit a website&lt;/a&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Item 1&lt;/li&gt;
+            &lt;li&gt;Item 2&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </section>
+
+    <section id="attributes">
+        <h2>HTML Attributes</h2>
+        <p>Attributes provide additional information about HTML elements. Here are some common attributes:</p>
+        <ul>
+            <li><strong>href</strong> - Specifies the URL for an anchor tag (&lt;a&gt;).</li>
+            <li><strong>src</strong> - Specifies the path for an image tag (&lt;img&gt;).</li>
+            <li><strong>alt</strong> - Provides alternative text for images.</li>
+            <li><strong>class</strong> - Specifies a class for CSS styling.</li>
+            <li><strong>id</strong> - Specifies a unique identifier for an element.</li>
+            <li><strong>style</strong> - Inline CSS styling for an element.</li>
+            <li><strong>target</strong> - Specifies where to open the linked document (e.g., in a new tab).</li>
+        </ul>
+
+        <h3>Example:</h3>
+        <pre>
+&lt;a href="https://example.com" target="_blank"&gt;Visit Example&lt;/a&gt;
+&lt;img src="image.jpg" alt="Description of image"&gt;
+        </pre>
+    </section>
+
+    <section id="forms">
+        <h2>HTML Forms</h2>
+        <p>Forms allow users to input data. Here's an example of a simple HTML form:</p>
+        <ul>
+            <li><strong>&lt;form&gt;</strong> - The container for all form elements.</li>
+            <li><strong>&lt;input&gt;</strong> - Allows the user to enter data. Type attribute defines input type (text, password, etc.).</li>
+            <li><strong>&lt;button&gt;</strong> - Used to submit the form.</li>
+        </ul>
+
+        <h3>Example:</h3>
+        <pre>
+&lt;form action="/submit" method="POST"&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;
+
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+        </pre>
+    </section>
+
+    <section id="semantic-elements">
+        <h2>Semantic HTML Elements</h2>
+        <p>Semantic elements help with accessibility and SEO by clearly defining the structure of the page. Common semantic elements include:</p>
+        <ul>
+            <li><strong>&lt;header&gt;</strong> - Defines the header section of a page or a section.</li>
+            <li><strong>&lt;footer&gt;</strong> - Defines the footer section of a page or a section.</li>
+            <li><strong>&lt;article&gt;</strong> - Represents a self-contained piece of content.</li>
+            <li><strong>&lt;section&gt;</strong> - Represents a section of related content.</li>
+            <li><strong>&lt;nav&gt;</strong> - Defines a navigation menu or links.</li>
+        </ul>
+
+        <h3>Example:</h3>
+        <pre>
+&lt;header&gt;
+    &lt;h1&gt;Website Header&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;section&gt;
+    &lt;h2&gt;Section Title&lt;/h2&gt;
+    &lt;p&gt;This is a section&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;Website Footer&lt;/p&gt;
+&lt;/footer&gt;
+        </pre>
+    </section>
+
+    <section id="advanced-tags">
+        <h2>Advanced HTML Tags</h2>
+        <p>Here are some advanced HTML tags and concepts that you'll need as you progress:</p>
+        <ul>
+            <li><strong>&lt;iframe&gt;</strong> - Embeds another document within the current page.</li>
+            <li><strong>&lt;canvas&gt;</strong> - Allows you to draw graphics using JavaScript.</li>
+            <li><strong>&lt;video&gt;</strong> and <strong>&lt;audio&gt;</strong> - Embeds media files.</li>
+            <li><strong>&lt;meta&gt;</strong> - Defines metadata for the document, such as charset or keywords.</li>
+        </ul>
+
+        <h3>Example:</h3>
+        <pre>
+&lt;iframe src="https://www.example.com" width="600" height="400"&gt;&lt;/iframe&gt;
+
+&lt;video controls&gt;
+    &lt;source src="movie.mp4" type="video/mp4"&gt;
+    &lt;source src="movie.ogg" type="video/ogg"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;
+        </pre>
+    </section>
+
+</main>
+
+<footer>
+    <p>Developed by <strong>Urmi Tiwari</strong></p>
+</footer>
+
+</body>
+</html>
+

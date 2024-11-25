@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React.js: Basics to Advanced</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        main {
+            padding: 2rem;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        code {
+            background: #eee;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>React.js: Basics to Advanced</h1>
+        <p>Your complete guide to learning React.js for free!</p>
+    </header>
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>React.js is a JavaScript library for building user interfaces. It allows you to create reusable components and manage the state of your application efficiently.</p>
+            <a href="https://reactjs.org/" target="_blank">Official Documentation</a>
+        </section>
+
+        <section id="prerequisites">
+            <h2>Prerequisites</h2>
+            <ul>
+                <li>Basic knowledge of HTML, CSS, and JavaScript</li>
+                <li>Familiarity with ES6+ features (arrow functions, destructuring, etc.)</li>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">Learn JavaScript (MDN)</a>
+            </ul>
+        </section>
+
+        <section id="setup">
+            <h2>Getting Started</h2>
+            <p>To start working with React, you need to set up a development environment. Use the following steps:</p>
+            <ol>
+                <li>Install Node.js: <a href="https://nodejs.org/" target="_blank">Download Node.js</a></li>
+                <li>Install a code editor like <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
+                <li>Initialize a new React app:</li>
+                <code>npx create-react-app my-app</code>
+                <li>Navigate to the project folder and start the app:</li>
+                <code>cd my-app</code><br>
+                <code>npm start</code>
+            </ol>
+        </section>
+
+        <section id="basics">
+            <h2>React Basics</h2>
+            <h3>1. JSX</h3>
+            <p>JSX is a syntax extension for JavaScript that looks similar to HTML.</p>
+            <code>
+                const element = <h1>Hello, world!</h1>;
+            </code>
+            <p>Learn more: <a href="https://reactjs.org/docs/introducing-jsx.html" target="_blank">JSX Documentation</a></p>
+
+            <h3>2. Components</h3>
+            <p>Components are reusable building blocks in React.</p>
+            <code>
+                function Welcome() {<br>
+                    &nbsp;&nbsp;return &lt;h1&gt;Hello, World!&lt;/h1&gt;;<br>
+                }
+            </code>
+            <p>Learn more: <a href="https://reactjs.org/docs/components-and-props.html" target="_blank">React Components</a></p>
+
+            <h3>3. Props</h3>
+            <p>Props (short for properties) allow you to pass data to components.</p>
+            <code>
+                function Greeting(props) {<br>
+                    &nbsp;&nbsp;return &lt;h1&gt;Hello, {props.name}!&lt;/h1&gt;;<br>
+                }
+            </code>
+            <p>Learn more: <a href="https://reactjs.org/docs/components-and-props.html" target="_blank">Props Documentation</a></p>
+
+            <h3>4. State</h3>
+            <p>State is used to manage the internal data of a component.</p>
+            <code>
+                import React, { useState } from 'react';<br>
+                function Counter() {<br>
+                    &nbsp;&nbsp;const [count, setCount] = useState(0);<br>
+                    &nbsp;&nbsp;return (<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Count: {count}&lt;/p&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button onClick={() => setCount(count + 1)}&gt;Increment&lt;/button&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                    &nbsp;&nbsp;);<br>
+                }
+            </code>
+            <p>Learn more: <a href="https://reactjs.org/docs/state-and-lifecycle.html" target="_blank">State Documentation</a></p>
+        </section>
+
+        <section id="advanced">
+            <h2>Advanced Topics</h2>
+            <h3>1. Context API</h3>
+            <p>The Context API is used for global state management.</p>
+            <a href="https://reactjs.org/docs/context.html" target="_blank">Learn Context API</a>
+
+            <h3>2. React Hooks</h3>
+            <p>Hooks like <code>useEffect</code> and <code>useReducer</code> add powerful functionalities.</p>
+            <a href="https://reactjs.org/docs/hooks-intro.html" target="_blank">React Hooks Documentation</a>
+
+            <h3>3. Routing</h3>
+            <p>React Router enables navigation between different views.</p>
+            <a href="https://reactrouter.com/" target="_blank">React Router</a>
+
+            <h3>4. Performance Optimization</h3>
+            <p>Techniques like code-splitting and memoization can optimize your React app.</p>
+            <a href="https://reactjs.org/docs/optimizing-performance.html" target="_blank">Optimizing Performance</a>
+        </section>
+
+        <section id="resources">
+            <h2>Free Learning Resources</h2>
+            <ul>
+                <li><a href="https://www.freecodecamp.org/learn/" target="_blank">FreeCodeCamp React Course</a></li>
+                <li><a href="https://www.udemy.com/course/react-redux/" target="_blank">Udemy Free React Course</a></li>
+                <li><a href="https://www.youtube.com/@Codevolution" target="_blank">Codevolution YouTube Channel</a></li>
+                <li><a href="https://scrimba.com/learn/learnreact" target="_blank">Scrimba React Course</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Happy Learning React.js!</p>
+    </footer>
+</body>
+</html>

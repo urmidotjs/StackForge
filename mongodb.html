@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MongoDB - In-depth Explanation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>MongoDB</h1>
+        <nav>
+            <a href="index.html">Back to Topics</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Introduction to MongoDB</h2>
+            <p>MongoDB is a popular NoSQL database known for its flexibility and scalability. Unlike traditional relational databases, MongoDB stores data in BSON format, which is a binary version of JSON. It's ideal for applications that deal with large amounts of unstructured or semi-structured data.</p>
+
+            <h3>Basic Concepts</h3>
+            <ul>
+                <li><strong>Documents:</strong> MongoDB stores data as documents (in BSON format), which can contain complex structures like arrays and embedded documents.</li>
+                <li><strong>Collections:</strong> Documents are grouped together in collections, similar to tables in relational databases.</li>
+                <li><strong>CRUD Operations:</strong> MongoDB supports Create, Read, Update, and Delete operations through simple queries.</li>
+            </ul>
+
+            <h3>Setting up MongoDB</h3>
+            <p>To start using MongoDB locally, download it from the <a href="https://www.mongodb.com/try/download/community" target="_blank">MongoDB website</a>. Once installed, use MongoDB's shell or connect via a Node.js application.</p>
+
+            <h3>MongoDB Example</h3>
+            <p>Here’s a basic example of using MongoDB in a Node.js application:</p>
+            <pre><code>
+const MongoClient = require('mongodb').MongoClient;
+const url = 'mongodb://localhost:27017';
+const dbName = 'myDatabase';
+MongoClient.connect(url, (err, client) => {
+    if (err) throw err;
+    const db = client.db(dbName);
+    const collection = db.collection('myCollection');
+    collection.insertOne({ name: 'John Doe' }, (err, res) => {
+        if (err) throw err;
+        console.log('Document inserted');
+        client.close();
+    });
+});
+            </code></pre>
+
+            <h3>Advanced Concepts</h3>
+            <ul>
+                <li><strong>Indexes:</strong> MongoDB supports indexes to improve query performance.</li>
+                <li><strong>Aggregation Framework:</strong> MongoDB’s aggregation framework is a powerful tool for data processing and transformation.</li>
+                <li><strong>Sharding:</strong> MongoDB supports horizontal scaling through sharding, which allows distributing data across multiple servers.</li>
+            </ul>
+
+            <h3>Resources</h3>
+            <ul>
+                <li><a href="https://www.mongodb.com/try/download/community" target="_blank">MongoDB Official Download</a></li>
+                <li><a href="https://docs.mongodb.com/" target="_blank">MongoDB Official Documentation</a></li>
+                <li><a href="https://www.youtube.com/watch?v=Ofk0ch7tQ-s" target="_blank">MongoDB Tutorial (freeCodeCamp)</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Master MongoDB for handling NoSQL databases!</p>
+    </footer>
+</body>
+</html>

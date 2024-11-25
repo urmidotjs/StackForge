@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics to Advanced - StackForge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <img src="assets/Logo.img.png" alt="StackForge Logo">
+    <h1>JavaScript Basics to Advanced</h1>
+    <p>Learn JavaScript from basics to advanced concepts with examples!</p>
+</header>
+
+<main>
+    <section>
+        <h2>1. JavaScript Basics</h2>
+        <p>JavaScript is a programming language that allows you to add interactivity to websites. It is the third core technology of the web along with HTML and CSS.</p>
+
+        <h3>Variables</h3>
+        <p>In JavaScript, variables can be declared using `var`, `let`, or `const`:</p>
+        <pre><code>
+let name = "John";
+const age = 30;
+var city = "New York";
+        </code></pre>
+
+        <h3>Data Types</h3>
+        <ul>
+            <li><strong>String</strong>: Text, e.g., "Hello"</li>
+            <li><strong>Number</strong>: Integer or floating point numbers, e.g., 10, 5.5</li>
+            <li><strong>Boolean</strong>: True or false values</li>
+            <li><strong>Object</strong>: A collection of properties, e.g., `{ name: "John", age: 30 }`</li>
+            <li><strong>Array</strong>: A list of values, e.g., `[1, 2, 3, 4]`</li>
+            <li><strong>Null</strong>: Represents the intentional absence of a value</li>
+            <li><strong>Undefined</strong>: A variable declared but not assigned a value</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2. Functions</h2>
+        <p>A function is a block of code designed to perform a particular task. Functions are reusable.</p>
+        
+        <h3>Function Declaration</h3>
+        <pre><code>
+function greet(name) {
+    return "Hello, " + name + "!";
+}
+        </code></pre>
+
+        <h3>Function Expression</h3>
+        <pre><code>
+const greet = function(name) {
+    return "Hello, " + name + "!";
+};
+        </code></pre>
+    </section>
+
+    <section>
+        <h2>3. Control Flow</h2>
+        <p>Control flow in JavaScript determines the order in which code is executed.</p>
+
+        <h3>Conditionals</h3>
+        <pre><code>
+if (age > 18) {
+    console.log("Adult");
+} else {
+    console.log("Minor");
+}
+        </code></pre>
+
+        <h3>Loops</h3>
+        <ul>
+            <li><strong>for loop</strong>: Repeats a block of code a specified number of times.</li>
+            <li><strong>while loop</strong>: Repeats a block of code while a condition is true.</li>
+            <li><strong>for...of loop</strong>: Loops over iterable objects (arrays, strings, etc.).</li>
+        </ul>
+
+        <h3>Example:</h3>
+        <pre><code>
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h2>4. Objects and Arrays</h2>
+        <p>Objects and Arrays are the two main data structures in JavaScript. Objects store key-value pairs, while Arrays store ordered lists.</p>
+
+        <h3>Objects</h3>
+        <pre><code>
+const person = {
+    name: "John",
+    age: 30,
+    greet: function() {
+        return "Hello " + this.name;
+    }
+};
+        </code></pre>
+
+        <h3>Arrays</h3>
+        <pre><code>
+const numbers = [1, 2, 3, 4, 5];
+numbers.push(6);
+console.log(numbers);
+        </code></pre>
+    </section>
+
+    <section>
+        <h2>5. DOM Manipulation</h2>
+        <p>DOM (Document Object Model) manipulation allows you to interact with the structure of the HTML document.</p>
+
+        <h3>Getting Elements</h3>
+        <pre><code>
+let element = document.getElementById("myElement");
+let elements = document.getElementsByClassName("myClass");
+        </code></pre>
+
+        <h3>Changing Elements</h3>
+        <pre><code>
+element.innerHTML = "New content!";
+        </code></pre>
+
+        <h3>Event Listeners</h3>
+        <pre><code>
+button.addEventListener("click", function() {
+    alert("Button clicked!");
+});
+        </code></pre>
+    </section>
+
+    <section>
+        <h2>6. Advanced JavaScript Concepts</h2>
+        <p>These topics delve into deeper aspects of JavaScript, including closures, promises, and asynchronous programming.</p>
+
+        <h3>Closures</h3>
+        <p>A closure is a function that remembers its lexical environment, even when the function is executed outside that environment.</p>
+        <pre><code>
+function outer() {
+    let counter = 0;
+    return function inner() {
+        counter++;
+        console.log(counter);
+    };
+}
+
+const increment = outer();
+increment();  // Output: 1
+increment();  // Output: 2
+        </code></pre>
+
+        <h3>Promises</h3>
+        <p>Promises are used to handle asynchronous operations in JavaScript.</p>
+        <pre><code>
+let promise = new Promise((resolve, reject) => {
+    let success = true;
+    if (success) {
+        resolve("Success!");
+    } else {
+        reject("Failure!");
+    }
+});
+
+promise.then(result => {
+    console.log(result);
+}).catch(error => {
+    console.log(error);
+});
+        </code></pre>
+
+        <h3>Async/Await</h3>
+        <p>Async/await simplifies working with promises by allowing you to write asynchronous code in a synchronous manner.</p>
+        <pre><code>
+async function fetchData() {
+    let response = await fetch('https://api.example.com/data');
+    let data = await response.json();
+    console.log(data);
+}
+
+fetchData();
+        </code></pre>
+    </section>
+</main>
+
+<footer>
+    <p>Developed by <strong>Urmi Tiwari</strong></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySQL - In-depth Explanation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>MySQL</h1>
+        <nav>
+            <a href="index.html">Back to Topics</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Introduction to MySQL</h2>
+            <p>MySQL is one of the most widely used relational database management systems (RDBMS). It's based on SQL (Structured Query Language) and is known for its speed, reliability, and ease of use. MySQL is ideal for handling structured data and supports a wide range of applications, from web applications to enterprise systems.</p>
+
+            <h3>Basic Concepts</h3>
+            <ul>
+                <li><strong>Database:</strong> A collection of tables that hold structured data.</li>
+                <li><strong>Tables:</strong> Data in MySQL is organized into tables, which consist of rows and columns.</li>
+                <li><strong>SQL Queries:</strong> SQL (Structured Query Language) is used to perform operations like creating tables, inserting data, and retrieving information from the database.</li>
+            </ul>
+
+            <h3>Setting up MySQL</h3>
+            <p>To install MySQL, download it from the <a href="https://dev.mysql.com/downloads/installer/" target="_blank">MySQL website</a> and follow the installation instructions.</p>
+
+            <h3>MySQL Example</h3>
+            <p>Here’s a basic example of using MySQL with Node.js:</p>
+            <pre><code>
+const mysql = require('mysql');
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'test'
+});
+connection.connect((err) => {
+    if (err) throw err;
+    console.log('Connected to MySQL database');
+});
+connection.query('SELECT * FROM users', (err, results) => {
+    if (err) throw err;
+    console.log(results);
+});
+connection.end();
+            </code></pre>
+
+            <h3>Advanced Concepts</h3>
+            <ul>
+                <li><strong>Joins:</strong> MySQL allows you to combine data from multiple tables using joins (INNER, LEFT, RIGHT, etc.).</li>
+                <li><strong>Transactions:</strong> MySQL supports transactions, which allow you to execute multiple queries as a single unit of work.</li>
+                <li><strong>Normalization:</strong> Data normalization is the process of organizing data in the database to reduce redundancy and improve efficiency.</li>
+            </ul>
+
+            <h3>Resources</h3>
+            <ul>
+                <li><a href="https://dev.mysql.com/doc/" target="_blank">MySQL Official Documentation</a></li>
+                <li><a href="https://www.w3schools.com/mysql/" target="_blank">MySQL Tutorial (w3schools)</a></li>
+                <li><a href="https://www.youtube.com/watch?v=7S_tz1z_5bA" target="_blank">MySQL Tutorial for Beginners</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Become proficient with MySQL for managing relational databases!</p>
+    </footer>
+</body>
+</html>

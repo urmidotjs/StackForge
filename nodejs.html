@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js - In-depth Explanation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Node.js</h1>
+        <nav>
+            <a href="index.html">Back to Topics</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Introduction to Node.js</h2>
+            <p>Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server-side, enabling full-stack JavaScript development. It uses non-blocking, event-driven architecture, which makes it efficient for building scalable applications.</p>
+
+            <h3>Basic Concepts</h3>
+            <ul>
+                <li><strong>Event Loop:</strong> The core mechanism that allows Node.js to handle multiple requests concurrently using a single thread.</li>
+                <li><strong>Non-blocking I/O:</strong> Node.js uses non-blocking I/O calls, which makes it lightweight and efficient in handling multiple requests simultaneously.</li>
+                <li><strong>Single-threaded Model:</strong> Unlike traditional web servers, Node.js operates on a single thread, which simplifies concurrency and increases performance.</li>
+            </ul>
+
+            <h3>Setting up Node.js</h3>
+            <p>To set up Node.js, download the latest version from the official <a href="https://nodejs.org" target="_blank">Node.js website</a>. After installation, you can verify it by running:</p>
+            <pre><code>node -v</code></pre>
+            <p>This will show the installed version of Node.js.</p>
+
+            <h3>Node.js Example: Hello World</h3>
+            <p>Here’s a simple "Hello World" application in Node.js:</p>
+            <pre><code>
+const http = require('http');
+const server = http.createServer((req, res) => {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('Hello, Node.js!');
+});
+server.listen(3000, () => {
+    console.log('Server running on port 3000');
+});
+            </code></pre>
+
+            <h3>Intermediate Concepts</h3>
+            <ul>
+                <li><strong>Modules:</strong> Node.js has a modular structure. You can use built-in modules like `http`, `fs`, and `path`, or install third-party modules via npm (Node Package Manager).</li>
+                <li><strong>npm (Node Package Manager):</strong> npm is the default package manager for Node.js. It helps to install libraries and manage dependencies for your projects.</li>
+                <li><strong>Callbacks & Promises:</strong> Node.js uses callbacks and Promises to handle asynchronous operations. Promises offer a cleaner, more readable way to manage asynchronous code.</li>
+            </ul>
+
+            <h3>Advanced Concepts</h3>
+            <ul>
+                <li><strong>Asynchronous Programming:</strong> Node.js’s single-threaded nature relies on asynchronous programming for concurrency. Promises, async/await, and event emitters are important tools in handling asynchronous operations.</li>
+                <li><strong>Streams:</strong> Streams are an essential concept in Node.js. They allow you to read and write data efficiently in chunks, making them ideal for handling large files and data.</li>
+                <li><strong>Cluster Module:</strong> The `cluster` module allows you to create child processes (workers) to take advantage of multi-core systems, making Node.js applications more scalable.</li>
+            </ul>
+
+            <h3>Resources</h3>
+            <ul>
+                <li><a href="https://nodejs.org/en/docs/" target="_blank">Node.js Official Documentation</a></li>
+                <li><a href="https://www.freecodecamp.org/news/learn-nodejs-full-course/" target="_blank">Node.js Full Course for Beginners</a></li>
+                <li><a href="https://www.youtube.com/watch?v=TlB_eWDSMt4" target="_blank">Node.js Crash Course (Traversy Media)</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Learn more about backend development with Node.js!</p>
+    </footer>
+</body>
+</html>
