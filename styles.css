@@ -190,3 +190,37 @@ footer {
         flex: 1 1 100%;
     }
 }
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        flex: 1 1 100%;
+    }
+
+    .topic-box, .backend-topic-box {
+        flex: 1 1 100%;
+    }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
