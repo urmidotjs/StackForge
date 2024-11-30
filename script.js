@@ -9,7 +9,7 @@ button.addEventListener('click',() =>{
     matchBrackets: true
 });
 
-// Function to execute JavaScript code
+
 function runCode() {
     var userCode = editor.getValue();
     try {
